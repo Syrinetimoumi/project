@@ -1,0 +1,19 @@
+<div class="movie-cards-container">
+    <h2>List of Movies</h2>
+    <div class="movie-cards">
+      <div class="movie-card" *ngFor="let movie of movies">
+
+        <img [src]="movie.imageURL" alt="Movie Poster" />
+        <div class="movie-info">
+          <h3>{{ movie.title }}</h3>
+          <p>{{ movie.overview | slice:0:100 }}...</p>
+          <h6>{{movie.releaseDate}}</h6>
+          
+          <button (click)="onWatchNow(movie)" style="margin-right: 8px; margin-bottom: 1%;">Watch Now</button>
+                      <a>                                                        </a>
+          <button >WATCH LIST</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  

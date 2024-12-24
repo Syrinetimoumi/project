@@ -1,0 +1,16 @@
+<div class="navbar">
+    <img style="width: 10%;" src="/assets/logoapp.png" alt="movie app Back" class="movie-image" />
+      <ul class="nav-links">
+        <li><a *ngIf="isLoggedIn" routerLink="/home">Home</a></li>
+        <li><a *ngIf="isLoggedIn" routerLink="watchlist">Watch List</a></li>
+        <li><a  *ngIf="isLoggedIn" routerLink="/home">Profile</a></li>
+        <!-- <div class="movie-info">
+        <button>Logout</button>
+         </div> -->
+     
+        <li *ngIf="!isLoggedIn"><a routerLink="/login">Login</a></li>
+        
+        <li *ngIf="isLoggedIn"><a routerLink="/login" (click)="logout()">Logout</a></li>
+      
+      </ul>
+    </div>

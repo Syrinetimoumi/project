@@ -1,0 +1,19 @@
+<div class="hero-section">
+  <img src="/assets/watchllistimg.png" alt="movie app Back" class="movie-image-watchlist" />
+</div>
+
+<div class="watchlist-container">
+  <div class="movie-cards">
+      <div class="movie-card" *ngFor="let movie of movies">
+          <img [src]="movie.imageURL" alt="{{ movie.title }} Poster" />
+          <div class="movie-info">
+              <h3>{{ movie.title }}</h3>
+              <p>{{ movie.description | slice: 0: 100 }}...</p>
+              <div class="actions">
+                  <a class="btn-primary" [routerLink]="'/movie-details/' + movie.id">Watch Now</a>
+                  <button class="btn-secondary" (click)="removeMovie(movie.id)">Remove</button>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

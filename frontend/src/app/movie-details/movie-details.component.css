@@ -1,0 +1,72 @@
+.movie-details-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .movie-details-card {
+    display: flex;
+    max-width: 800px;
+    background-color: #f8f8f8;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .movie-poster img {
+    max-width: 300px;
+    border-radius: 10px;
+    margin-right: 20px;
+  }
+  
+  .movie-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .movie-info h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .movie-info .movie-overview {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    line-height: 1.5;
+  }
+  
+  .movie-metadata {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+  
+  .movie-metadata span {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .movie-actions {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .watch-button,
+  .add-to-watchlist-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #2c3e50;
+    color: #fff;
+    border: none;
+    transition: background-color 0.3s;
+  }
+  
+  .watch-button:hover,
+  .add-to-watchlist-button:hover {
+    background-color: #34495e;
+  }
+  

@@ -1,0 +1,41 @@
+
+<div class="content">
+    <div class="header">
+      <h1 class="title">Welcome Back</h1>
+      <img style="height: 50%; width: 15%;" src="/assets/logoapp.png" alt="movie app Back" class="movie-image" />
+      <p class="subTitle">Sign In to access your account</p>
+    </div>
+  
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <div class="form-container">
+        <div class="input-login">
+          <label for="email">email</label> 
+          <div class="input-wrapper">
+            <input formControlName="email" id="username" type="text" placeholder="" class="input" />
+            <i class="fas fa-user icon"></i>
+          </div>
+        </div>
+  
+        <div class="input-login">
+           <label for="password">PASSWORD</label> 
+          <div class="input-wrapper">
+            <input formControlName="password" id="password" type="password" placeholder="" class="input" />
+            <i class="fas fa-lock icon"></i>
+          </div>
+          <input class="btn-solid" type="submit" value="LOGIN" />
+        </div>
+       
+  
+        <div class="forgotPassword">
+          <a routerLink="" style="color: #28357f;">Forget Password?</a>
+        </div>
+        <div class="signupLink">
+          <p>New Member? <a style="color: #7045ff;" routerLink="/signup">Signup now</a></p>
+        </div>
+      </div>
+  
+      
+    </form>
+  </div>
+
+  

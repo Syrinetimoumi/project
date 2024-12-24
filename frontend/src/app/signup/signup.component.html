@@ -1,0 +1,73 @@
+<div class="content">
+    <div class="header">
+      <h1 class="title">Welcome</h1>
+      <img src="/assets/logoapp.png" alt="movie app Back" class="movie-image" />
+
+     <!-- <img src="/assets/logomovieapp.png" alt="movie app Back" class="movie-image" /> -->
+      <p class="subTitle">Sign Up to create your account</p>
+    </div>
+  
+    <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
+      <div class="form-container">
+        
+      
+  
+      
+        <div class="input-signup">
+          <label for="email">NAME</label>
+          <div class="input-wrapper">
+            <input formControlName="name" id="name" type="text" placeholder="" class="input" />
+            <i class="fas fa-envelope icon"></i>
+          </div>
+        </div>
+  
+      
+  
+
+        <div class="input-signup">
+          <label for="passwordConfirmation"> EMAIL</label>
+          <div class="input-wrapper">
+            <input formControlName="email" id="email" type="email" placeholder="" class="input" />
+            <i class="fas fa-lock icon"></i>
+          </div>
+         
+        </div>
+        <!-- Password Confirmation Input -->
+        <div class="input-signup">
+          <label for="passwordConfirmation"> PASSWORD</label>
+          <div class="input-wrapper">
+            <input formControlName="password" id="password" type="password" placeholder="" class="input" />
+            <i class="fas fa-lock icon"></i>
+          </div>
+
+        </div>
+
+
+        
+        <!-- Email Input -->
+        <div class="input-signup">
+          <label for="email">ROLE :</label>
+          <div class="input-wrapper">
+            <input formControlName="isAdmin" value="true"  type="radio"   /> <label>Admin</label> <br>
+           <input formControlName="isAdmin" value="false" type="radio"  /><label>User</label>
+          
+          </div>
+        </div>
+
+  
+        <!-- Already Member Link -->
+        <div class="signupLink">
+          <p>Already a Member? <a style="color: #7045ff;" routerLink="/login">Sign in now</a></p>
+        </div>
+
+        
+      </div>
+
+
+      <input class="btn-solid" type="submit" value="SIGNUP" />
+  
+    
+    
+    </form>
+  </div>
+  

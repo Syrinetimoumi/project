@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: node-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: node
+  template:
+    metadata:
+      labels:
+        app: node
+    spec:
+      containers:
+      - name: node
+        image: node:18
+        command: ["node", "index.js"]
+        volumeMounts:
+        - name: node-code
+          mountPath: /usr/src/app
+      volumes:
+      - name: node-code
+        hostPath:
+          path: /backend-code

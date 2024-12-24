@@ -1,0 +1,22 @@
+<div class="movie-details-container">
+    <div class="movie-details-card">
+      <div class="movie-poster">
+        <img [src]="movie.imageURL" alt="Movie Poster" />
+      </div>
+      <div class="movie-info">
+        <h2>{{ movie.title }}</h2>
+        <p class="movie-overview">{{ movie.overview }}</p>
+        <div class="movie-metadata">
+          <span><strong>Release Date:</strong> {{ movie.releaseDate | date: 'longDate' }}</span>
+          <span><strong>Language:</strong> {{ movie.originalLanguage | uppercase }}</span>
+          <span><strong>Category:</strong> {{ movie.category }}</span>
+          <span><strong>Average Rating:</strong> {{ movie.averageRating }}</span>
+        </div>
+        <div class="movie-actions">
+          <button class="watch-button">Watch Now</button>
+          <button (click)="onAddToWatchlist(movie.id)" class="add-to-watchlist-button">Add to Watchlist</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
